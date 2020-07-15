@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClassesPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-Qz-VfL">
-                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <rect key="frame" x="16" y="16" width="382" height="704"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-Hk-DVQ">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
@@ -48,22 +48,46 @@
                                                 <include reference="QA5-o9-Pxl"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="Mpd-Hw-uvt"/>
+                                                <include reference="MyM-Qo-7Hi"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hng-WL-IH5">
-                                        <rect key="frame" x="0.0" y="161" width="382" height="464"/>
+                                        <rect key="frame" x="0.0" y="161" width="382" height="382"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6AB-9L-fmh">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="464"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="382"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V6B-Y2-QGJ">
-                                                <rect key="frame" x="198" y="0.0" width="184" height="464"/>
+                                                <rect key="frame" x="198" y="0.0" width="184" height="382"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="subviews">
+                                                <exclude reference="6AB-9L-fmh"/>
+                                                <exclude reference="V6B-Y2-QGJ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="6AB-9L-fmh"/>
+                                                <include reference="V6B-Y2-QGJ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="subviews">
+                                                <exclude reference="6AB-9L-fmh"/>
+                                                <exclude reference="V6B-Y2-QGJ"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="of5-so-HkI">
-                                        <rect key="frame" x="0.0" y="636" width="382" height="150"/>
+                                        <rect key="frame" x="0.0" y="554" width="382" height="150"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="of5-so-HkI" secondAttribute="height" multiplier="692:90" id="KRb-gg-Zdg"/>
@@ -72,6 +96,8 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="KRb-gg-Zdg"/>
+                                                <exclude reference="bmO-am-wVf"/>
                                                 <exclude reference="u8K-Vf-e6B"/>
                                             </mask>
                                         </variation>
@@ -82,16 +108,23 @@
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <mask key="constraints">
+                                                <exclude reference="KRb-gg-Zdg"/>
                                                 <exclude reference="bmO-am-wVf"/>
                                                 <include reference="u8K-Vf-e6B"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="bmO-am-wVf"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="91E-Ke-Rdv">
-                                        <rect key="frame" x="0.0" y="202" width="776" height="159"/>
+                                        <rect key="frame" x="0.0" y="185.33333333333337" width="704" height="196.66666666666663"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nva-R1-1eh">
-                                                <rect key="frame" x="0.0" y="0.0" width="159" height="159"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="196.66666666666666"/>
                                                 <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Nva-R1-1eh" secondAttribute="height" multiplier="1:1" id="YoS-zJ-THN"/>
@@ -101,12 +134,41 @@
                                                         <include reference="YoS-zJ-THN"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="YoS-zJ-THN"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="YoS-zJ-THN"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Iy-qv-8Ew">
-                                                <rect key="frame" x="174" y="0.0" width="602" height="159"/>
+                                                <rect key="frame" x="211.66666666666666" y="0.0" width="492.33333333333337" height="196.66666666666666"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="Nva-R1-1eh"/>
+                                                <exclude reference="0Iy-qv-8Ew"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="subviews">
+                                                <include reference="Nva-R1-1eh"/>
+                                                <include reference="0Iy-qv-8Ew"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <exclude reference="Nva-R1-1eh"/>
+                                                <exclude reference="0Iy-qv-8Ew"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -128,8 +190,28 @@
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <mask key="subviews">
+                                        <include reference="2nV-Hk-DVQ"/>
                                         <exclude reference="hng-WL-IH5"/>
+                                        <include reference="of5-so-HkI"/>
                                         <include reference="91E-Ke-Rdv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="2nV-Hk-DVQ"/>
+                                        <include reference="hng-WL-IH5"/>
+                                        <include reference="of5-so-HkI"/>
+                                        <exclude reference="91E-Ke-Rdv"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="bls-Gg-N8V"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="2nV-Hk-DVQ"/>
+                                        <exclude reference="hng-WL-IH5"/>
+                                        <include reference="of5-so-HkI"/>
                                     </mask>
                                 </variation>
                             </stackView>
@@ -145,17 +227,48 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JFo-Ud-OoF" secondAttribute="height" multiplier="1:1" id="jxT-xu-Jo4"/>
                                                 </constraints>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="jxT-xu-Jo4"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nkl-Qx-pA8">
                                                 <rect key="frame" x="256" y="0.0" width="708" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.01176470588" green="0.60784313729999995" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tNZ-pQ-qhq" secondAttribute="height" multiplier="482:120" id="1tv-xL-TYn"/>
                                         </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="subviews">
+                                                <exclude reference="JFo-Ud-OoF"/>
+                                                <exclude reference="Nkl-Qx-pA8"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <exclude reference="JFo-Ud-OoF"/>
+                                                <exclude reference="Nkl-Qx-pA8"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="1tv-xL-TYn"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="tNZ-pQ-qhq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="tNZ-pQ-qhq"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-tr-ANU">
                                 <rect key="frame" x="603" y="295" width="391" height="443"/>
@@ -163,6 +276,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="391" id="ZHV-v4-XoP"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="ZHV-v4-XoP"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Pa-q8-rs4">
                                 <rect key="frame" x="161" y="412" width="192" height="192"/>
@@ -174,6 +292,16 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JHu-R3-79g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="8RG-E9-hwT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="8RG-E9-hwT"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -205,8 +333,28 @@
                                 <exclude reference="hr5-tr-ANU"/>
                                 <exclude reference="3Pa-q8-rs4"/>
                             </mask>
+                            <mask key="constraints">
+                                <exclude reference="AHD-rC-ulH"/>
+                                <exclude reference="N2D-IX-8qz"/>
+                                <exclude reference="idL-YR-PBM"/>
+                                <exclude reference="02g-6S-JdU"/>
+                                <exclude reference="GcR-tN-kcX"/>
+                                <exclude reference="TdE-QP-mOp"/>
+                                <exclude reference="3Rr-H7-1QE"/>
+                                <exclude reference="rI6-CI-VmI"/>
+                            </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="XWz-Qz-VfL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="XWz-Qz-VfL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="XWz-Qz-VfL"/>
                             </mask>
@@ -217,6 +365,20 @@
                                 <include reference="Nqb-KS-8ay"/>
                                 <include reference="hr5-tr-ANU"/>
                                 <include reference="3Pa-q8-rs4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Np0-wU-sLc"/>
+                                <exclude reference="n8Y-jD-qjC"/>
+                                <exclude reference="ndZ-7R-v5a"/>
+                                <include reference="AHD-rC-ulH"/>
+                                <exclude reference="KU6-Fj-zV2"/>
+                                <include reference="N2D-IX-8qz"/>
+                                <include reference="idL-YR-PBM"/>
+                                <include reference="02g-6S-JdU"/>
+                                <include reference="GcR-tN-kcX"/>
+                                <include reference="TdE-QP-mOp"/>
+                                <include reference="3Rr-H7-1QE"/>
+                                <include reference="rI6-CI-VmI"/>
                             </mask>
                         </variation>
                     </view>
